@@ -1,0 +1,84 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Documentação API Museu",
+    "description": "Descrição de como utilizar as endpoits da API.",
+    "version": "1.0.0"
+  },
+  "host": "http://localhost:8000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Visitantes",
+      "description": "Rotas do visitante"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/visitantes/total-por-genero": {
+      "get": {
+        "tags": [
+          "Visitantes"
+        ],
+        "summary": "Traz o total por genero",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Visitante": {
+      "type": "object",
+      "properties": {
+        "visitante_nome": {
+          "type": "string",
+          "example": "Gleidson"
+        },
+        "visitante_cpf": {
+          "type": "string",
+          "example": "000.000.000-00"
+        },
+        "visitante_profissao": {
+          "type": "string",
+          "example": "Developer"
+        },
+        "visitante_cidade": {
+          "type": "string",
+          "example": "Fortaleza"
+        },
+        "visitante_bairro": {
+          "type": "string",
+          "example": "Edson Queiroz"
+        },
+        "visitante_genero": {
+          "type": "number",
+          "example": 0
+        },
+        "visitante_data": {
+          "type": "string",
+          "example": "2024-03-01 11:47:00"
+        },
+        "visitante_status": {
+          "type": "boolean",
+          "example": false
+        }
+      },
+      "required": [
+        "visitante_nome",
+        "visitante_cpf",
+        "visitante_profissao",
+        "visitante_cidade",
+        "visitante_bairro",
+        "visitante_genero",
+        "visitante_data",
+        "visitante_status"
+      ]
+    }
+  }
+}
